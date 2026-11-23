@@ -1,0 +1,32 @@
+@if (loginUrl) {
+  @if (isInternal) {
+    <a
+      class="button"
+      [class.button-outline]="variant() === 'outline'"
+      [class.button-light]="variant() === 'light'"
+      [routerLink]="loginUrl"
+    >
+      Iniciar sesión
+    </a>
+  } @else {
+    <a
+      class="button"
+      [class.button-outline]="variant() === 'outline'"
+      [class.button-light]="variant() === 'light'"
+      [href]="loginUrl"
+    >
+      Iniciar sesión
+    </a>
+  }
+} @else {
+  <button
+    class="button login-pending"
+    [class.button-outline]="variant() === 'outline'"
+    [class.button-light]="variant() === 'light'"
+    type="button"
+    disabled
+    title="Pendiente de configurar la ruta o URL real de autenticación"
+  >
+    Iniciar sesión
+  </button>
+}

@@ -1,0 +1,37 @@
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+<header class="site-header" [class.menu-is-open]="menuOpen()">
+  <div class="header-inner">
+    <a class="brand" href="#inicio" aria-label="AliviaTech, ir al inicio" (click)="closeMenu()">
+      <img class="header-logo" src="/assets/logo.png" width="52" height="52" alt="" aria-hidden="true" />
+      <span>Alivia<span class="brand-accent">Tech</span></span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="primary-navigation"
+      [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+      (click)="toggleMenu()"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav
+      class="primary-nav"
+      id="primary-navigation"
+      aria-label="Navegación principal"
+      [class.open]="menuOpen()"
+    >
+      <a href="#inicio" [class.active]="activeSection() === 'inicio'" [attr.aria-current]="activeSection() === 'inicio' ? 'page' : null" (click)="closeMenu()">Inicio</a>
+      <a href="#como-funciona" [class.active]="activeSection() === 'como-funciona'" [attr.aria-current]="activeSection() === 'como-funciona' ? 'page' : null" (click)="closeMenu()">Cómo funciona</a>
+      <a href="#experiencias" [class.active]="activeSection() === 'experiencias'" [attr.aria-current]="activeSection() === 'experiencias' ? 'page' : null" (click)="closeMenu()">Experiencias</a>
+      <a href="#informacion" [class.active]="activeSection() === 'informacion'" [attr.aria-current]="activeSection() === 'informacion' ? 'page' : null" (click)="closeMenu()">Información</a>
+      <a href="#seguridad" [class.active]="activeSection() === 'seguridad'" [attr.aria-current]="activeSection() === 'seguridad' ? 'page' : null" (click)="closeMenu()">Seguridad</a>
+      <app-login-link class="mobile-login" />
+    </nav>
+
+    <app-login-link class="desktop-login" />
+  </div>
+</header>

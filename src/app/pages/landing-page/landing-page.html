@@ -1,0 +1,382 @@
+<app-site-header />
+
+<main id="contenido-principal">
+  <section class="hero" id="inicio" data-nav-section>
+    <div class="hero-ambient hero-ambient-one" aria-hidden="true"></div>
+    <div class="hero-ambient hero-ambient-two" aria-hidden="true"></div>
+    <img class="hero-orb" src="/assets/hero-mint-orb.svg" alt="" aria-hidden="true" />
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow hero-kicker">SEGUIMIENTO ENTRE SESIONES</p>
+        <h1>Información clara para <span>acompañar mejor</span> el bienestar.</h1>
+        <p class="hero-lead">
+          AliviaTech organiza registros de bienestar, eventos confirmados y datos complementarios
+          para que psicólogos y pacientes mantengan el contexto entre sesiones.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#como-funciona">Explorar AliviaTech</a>
+          <a class="button button-soft" href="#experiencias" (click)="selectRole('patient')">Soy paciente</a>
+        </div>
+
+        <div class="chip-row hero-chips" aria-label="Características principales">
+          <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Seguimiento asincrónico</span>
+          <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Acceso por invitación</span>
+          <span class="chip"><span class="chip-dot" aria-hidden="true"></span>Información organizada</span>
+        </div>
+        <p class="scope-note">
+          Diseñado para consulta posterior del profesional. No reemplaza atención de emergencia,
+          diagnóstico ni vigilancia continua.
+        </p>
+      </div>
+
+      <div
+        class="hero-visual-stage"
+        appHeroScale
+        (pointermove)="moveHero($event)"
+        (pointerleave)="resetHero($event)"
+      >
+        <div
+          class="hero-artboard"
+          role="img"
+          aria-label="Demostración ilustrativa de las experiencias de psicólogo y paciente en AliviaTech"
+        >
+          <img class="visual-ellipse" src="/assets/hero-ellipse.svg" alt="" aria-hidden="true" />
+          <span class="demo-label">Demostración · datos ilustrativos</span>
+
+          <div class="laptop depth-back" aria-hidden="true">
+            <div class="laptop-lid">
+              <div class="laptop-screen">
+                <div class="screen-topbar">
+                  <span class="screen-brand"><i>A</i> AliviaTech</span>
+                  <span class="screen-avatar">AP</span>
+                </div>
+                <strong class="screen-hello">Buenos días, Andrea</strong>
+                <small class="screen-subtitle">Resumen de seguimiento</small>
+                <div class="kpi-grid">
+                  <div class="kpi kpi-mint"><b>18</b><span>pacientes</span></div>
+                  <div class="kpi kpi-cream"><b>4</b><span>invitaciones</span></div>
+                  <div class="kpi kpi-green"><b>2 días</b><span>desde revisión</span></div>
+                </div>
+                <div class="screen-section-title"><strong>Últimas novedades</strong><span>Ver detalle</span></div>
+                <div class="novelties"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+
+          <div class="phone hero-phone depth-front" aria-hidden="true">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="mobile-brand"><i>A</i><span>AliviaTech</span></div>
+              <strong>Hola, Marta</strong>
+              <small>¿Cómo te sientes hoy?</small>
+              <div class="moods"><i>☹</i><i>◔</i><i>●</i><i class="active">☺</i></div>
+              <small>Ansiedad percibida</small>
+              <b class="anxiety-value">5/10</b>
+              <span class="mini-button">Registrar</span>
+            </div>
+          </div>
+
+          <div class="floating-badge review-badge depth-mid" aria-hidden="true">
+            <span class="badge-icon">✓</span>
+            <span><strong>Listo para revisar</strong><small>Información nueva organizada</small></span>
+          </div>
+          <div class="floating-badge patients-badge depth-front" aria-hidden="true">
+            <span class="badge-icon">18</span>
+            <span><strong>Pacientes activos</strong><small>Seguimientos en curso</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-tinted how" id="como-funciona" data-nav-section>
+    <div class="container">
+      <div class="section-heading" appReveal>
+        <p class="eyebrow">CÓMO FUNCIONA</p>
+        <h2>Un flujo simple, sin convertir el seguimiento en vigilancia.</h2>
+        <p class="section-intro">
+          Cada persona aporta información cuando corresponde y el especialista la revisa dentro de
+          su práctica profesional.
+        </p>
+      </div>
+
+      <div class="steps-grid" aria-label="Flujo de seguimiento en cuatro pasos">
+        <article class="step-card" appReveal [appRevealDelay]="0">
+          <div class="step-heading"><span class="number">01</span><h3>El psicólogo invita</h3></div>
+          <p>Registra al paciente y envía la invitación necesaria para activar su cuenta.</p>
+        </article>
+        <article class="step-card" appReveal [appRevealDelay]="90">
+          <div class="step-heading"><span class="number">02</span><h3>El paciente registra</h3></div>
+          <p>Anota cómo se siente y, si lo desea, añade un comentario breve.</p>
+        </article>
+        <article class="step-card" appReveal [appRevealDelay]="180">
+          <div class="step-heading"><span class="number">03</span><h3>Se integra el contexto</h3></div>
+          <p>La pulsera simulada aporta sueño, frecuencia cardiaca y actividad como datos complementarios.</p>
+        </article>
+        <article class="step-card" appReveal [appRevealDelay]="270">
+          <div class="step-heading"><span class="number">04</span><h3>El profesional revisa</h3></div>
+          <p>Consulta registros y eventos confirmados cuando corresponde, sin atención en vivo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section audiences" id="experiencias" data-nav-section aria-labelledby="audiences-title">
+    <div class="container">
+      <div class="audiences-heading" appReveal>
+        <div>
+          <p class="eyebrow">EXPERIENCIA POR ROL</p>
+          <h2 id="audiences-title">Dos perspectivas.<br />Un mismo seguimiento.</h2>
+        </div>
+        <p class="section-intro">
+          La información se adapta a lo que necesita cada rol, manteniendo separados los registros
+          del paciente y las notas internas del profesional.
+        </p>
+      </div>
+
+      <div class="role-selector-wrap" appReveal>
+        <div class="role-selector" role="group" aria-label="Destacar experiencia por rol" (keydown)="handleRoleKeydown($event)">
+          <button
+            id="role-patient"
+            type="button"
+            [class.active]="selectedRole() === 'patient'"
+            [attr.aria-pressed]="selectedRole() === 'patient'"
+            aria-controls="pacientes"
+            (click)="selectRole('patient')"
+          >
+            <span aria-hidden="true">●</span> Soy paciente
+          </button>
+          <button
+            id="role-psychologist"
+            type="button"
+            [class.active]="selectedRole() === 'psychologist'"
+            [attr.aria-pressed]="selectedRole() === 'psychologist'"
+            aria-controls="psicologos"
+            (click)="selectRole('psychologist')"
+          >
+            <span aria-hidden="true">✦</span> Soy psicólogo
+          </button>
+        </div>
+        <p class="role-status" aria-live="polite">
+          Vista destacada: {{ selectedRole() === 'patient' ? 'paciente' : 'psicólogo' }}
+        </p>
+      </div>
+
+      <div class="audience-grid">
+        <article
+          class="audience-card psychologist-card"
+          id="psicologos"
+          [class.is-featured]="selectedRole() === 'psychologist'"
+          [class.is-muted]="selectedRole() !== 'psychologist'"
+          appReveal
+        >
+          <div class="selected-pill" [class.visible]="selectedRole() === 'psychologist'">Vista seleccionada</div>
+          <div class="audience-card-grid">
+            <div class="audience-copy">
+              <p class="eyebrow">PARA PSICÓLOGOS</p>
+              <h3>Revisa lo importante sin perder contexto.</h3>
+              <p>
+                Dashboard, detalle del paciente, registros, eventos confirmados, sesiones y reportes
+                en un solo espacio profesional.
+              </p>
+              <ul class="check-list">
+                <li>Novedades desde la última revisión</li>
+                <li>Historial separado por fuente</li>
+                <li>Análisis descriptivo como apoyo</li>
+                <li>Notas internas no visibles para el paciente</li>
+              </ul>
+            </div>
+
+            <div class="role-demo psychologist-demo" aria-label="Ejemplo ilustrativo de panel profesional">
+              <span class="demo-tag">EJEMPLO ILUSTRATIVO</span>
+              <div class="demo-top"><span>Paciente · M. R.</span><i>Últimos 7 días</i></div>
+              <div class="wellbeing-row">
+                <div><small>Bienestar registrado</small><strong>Estable</strong></div>
+                <span class="sparkline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+              </div>
+              <div class="demo-events"><span><i></i> 3 registros manuales</span><span><i></i> 1 evento confirmado</span></div>
+              <div class="demo-note"><small>Para revisar en la próxima sesión</small><p>Resumen descriptivo disponible</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article
+          class="audience-card patient-card"
+          id="pacientes"
+          [class.is-featured]="selectedRole() === 'patient'"
+          [class.is-muted]="selectedRole() !== 'patient'"
+          appReveal
+          [appRevealDelay]="100"
+        >
+          <div class="selected-pill" [class.visible]="selectedRole() === 'patient'">Vista seleccionada</div>
+          <div class="audience-card-grid">
+            <div class="audience-copy">
+              <p class="eyebrow">PARA PACIENTES</p>
+              <h3>Registra a tu ritmo y consulta lo compartido.</h3>
+              <p>
+                Un espacio sencillo para registrar bienestar, gestionar eventos pendientes y revisar
+                contenido compartido por su psicólogo.
+              </p>
+              <ul class="check-list">
+                <li>Acceso únicamente mediante invitación</li>
+                <li>Registro voluntario de bienestar</li>
+                <li>Confirmación de eventos pendientes</li>
+                <li>Sesiones y recomendaciones compartidas</li>
+              </ul>
+            </div>
+
+            <div class="role-demo patient-demo" aria-label="Ejemplo ilustrativo de panel de paciente">
+              <span class="demo-tag">EJEMPLO ILUSTRATIVO</span>
+              <div class="demo-mobile-head"><i>A</i><span>Hola, Marta</span><b>•••</b></div>
+              <small>¿Cómo te sientes hoy?</small>
+              <div class="mood-scale"><span>☹</span><span>◔</span><span>●</span><span class="active">☺</span></div>
+              <div class="patient-metric"><span>Ansiedad percibida</span><strong>5<small>/10</small></strong></div>
+              <span class="demo-action">Hacer un registro</span>
+              <div class="recommendation"><small>Última recomendación compartida</small><p>Respiración 4-7-8 antes de dormir.</p></div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="demo-disclaimer">Las pantallas y cantidades mostradas son ejemplos visuales; no corresponden a pacientes ni datos reales.</p>
+    </div>
+  </section>
+
+  <section class="section section-tinted info" id="informacion" data-nav-section>
+    <div class="container">
+      <div class="section-heading split-heading" appReveal>
+        <div>
+          <p class="eyebrow">INFORMACIÓN QUE SÍ AYUDA</p>
+          <h2>Diferentes fuentes, una lectura más completa entre sesiones.</h2>
+        </div>
+        <p class="section-intro">
+          Cada fuente mantiene su propia escala y significado. AliviaTech organiza el contexto; no
+          convierte los datos en diagnósticos automáticos.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card" appReveal [appRevealDelay]="0">
+          <span class="line-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 20h4l11-11-4-4L4 16v4Zm9-13 4 4M4 12V4h8" /></svg>
+          </span>
+          <h3>Registros manuales</h3>
+          <p>Estado de ánimo, ansiedad percibida y comentario opcional del paciente.</p>
+          <span class="card-meta">REGISTRO VOLUNTARIO</span>
+        </article>
+        <article class="info-card" appReveal [appRevealDelay]="80">
+          <span class="line-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="7" y="5" width="10" height="14" rx="3" /><path d="M9 2h6M9 22h6M9 12h2l1-3 2 6 1-3h2" /></svg>
+          </span>
+          <h3>Datos de pulsera simulada</h3>
+          <p>Sueño, frecuencia cardiaca y actividad física como información complementaria.</p>
+          <span class="card-meta">SIN HARDWARE FÍSICO</span>
+        </article>
+        <article class="info-card" appReveal [appRevealDelay]="160">
+          <span class="line-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3 3.5 19h17L12 3Z" /><path d="M12 9v4M12 16h.01" /></svg>
+          </span>
+          <h3>Eventos confirmados</h3>
+          <p>El profesional los consulta cuando el paciente confirma que el evento ocurrió.</p>
+          <span class="card-meta">CONTROL DEL PACIENTE</span>
+        </article>
+        <article class="info-card" appReveal [appRevealDelay]="240">
+          <span class="line-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3" /><path d="M7 9h4M7 13h10M7 17h7M15 9h2" /></svg>
+          </span>
+          <h3>Vista integrada</h3>
+          <p>Contexto reunido para revisar cuando corresponde, sin monitoreo continuo.</p>
+          <span class="card-meta">CONSULTA POSTERIOR</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ai-section" id="analisis">
+    <div class="container ai-grid">
+      <article class="ai-copy" appReveal>
+        <div class="ai-orb" aria-hidden="true">✦</div>
+        <p class="eyebrow">ANÁLISIS ASISTIDO CON IA</p>
+        <h2>IA para resumir y comparar, no para diagnosticar.</h2>
+        <p>
+          El profesional puede generar resúmenes descriptivos de registros manuales, datos simulados
+          de pulsera o una vista integrada para el periodo que seleccione.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Sin predicciones clínicas</span>
+          <span class="chip">Sin recomendaciones automáticas</span>
+        </div>
+        <strong>La interpretación y decisión clínica permanecen en manos del psicólogo.</strong>
+      </article>
+
+      <article class="summary-card" appReveal [appRevealDelay]="120">
+        <div class="summary-header">
+          <div><span class="demo-tag">EJEMPLO ILUSTRATIVO</span><h3>Resumen descriptivo · últimos 7 días</h3></div>
+          <span class="summary-spark" aria-hidden="true">✦</span>
+        </div>
+        <p class="summary-source">Fuentes: registros manuales + pulsera simulada</p>
+        <div class="summary-block">
+          <p><span></span>Se observan registros de mayor ansiedad en días con menor duración de sueño.</p>
+          <p><span></span>La persona mencionó exposiciones académicas en varios comentarios.</p>
+          <p><span></span>Hubo 2 eventos confirmados durante el periodo.</p>
+        </div>
+        <strong>Este ejemplo organiza información registrada y no constituye diagnóstico ni evaluación de riesgo.</strong>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-tinted trust" id="seguridad" data-nav-section>
+    <div class="container">
+      <div class="section-heading" appReveal>
+        <p class="eyebrow">SEGURIDAD Y ALCANCE</p>
+        <h2>Tecnología útil, con límites claros.</h2>
+        <p class="section-intro">
+          La plataforma acompaña el seguimiento entre sesiones, pero no sustituye la relación
+          terapéutica ni los canales de emergencia.
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <article class="warning-card" appReveal>
+          <div class="warning-heading">
+            <span class="warning-icon" aria-hidden="true">!</span>
+            <div><span>LÍMITE DEL SERVICIO</span><h3>No reemplaza atención clínica ni monitoreo en tiempo real</h3></div>
+          </div>
+          <p>
+            AliviaTech no funciona como servicio de emergencia, no requiere vigilancia continua y
+            no predice crisis. Organiza información para que el psicólogo la revise cuando corresponda.
+          </p>
+          <div class="chip-row"><span class="chip">Seguimiento asincrónico</span><span class="chip">Sin diagnóstico automático</span></div>
+        </article>
+
+        <article class="security-card" appReveal [appRevealDelay]="100">
+          <h3>Privacidad desde la experiencia</h3>
+          <dl class="security-list">
+            <div><dt><span>✓</span><span>Consentimiento informado</span></dt><dd>La experiencia debe explicar qué información se comparte y con qué finalidad.</dd></div>
+            <div><dt><span>✓</span><span>Acceso organizado por rol</span></dt><dd>Cada rol accede a las funciones previstas para su participación.</dd></div>
+            <div><dt><span>✓</span><span>Separación de notas internas</span></dt><dd>Las notas internas del psicólogo no se muestran al paciente.</dd></div>
+          </dl>
+          <a class="text-link" href="/legal/politica-privacidad-v1.0.html">Leer política de privacidad</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta" aria-labelledby="cta-title">
+    <img src="/assets/cta-ellipse.svg" alt="" aria-hidden="true" />
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="cta-content" appReveal>
+      <p class="eyebrow">ALIVIATECH</p>
+      <h2 id="cta-title">Más contexto entre sesiones.<br />Más claridad al momento de revisar.</h2>
+      <p>
+        Una experiencia pensada para psicólogos y pacientes, sin añadir complejidad innecesaria al seguimiento.
+      </p>
+      <app-login-link variant="light" />
+      <small>Los pacientes acceden únicamente mediante invitación de su psicólogo.</small>
+    </div>
+  </section>
+</main>
+
+<app-site-footer />
